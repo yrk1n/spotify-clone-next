@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import SupabaseProvider from "./providers/SupabaseProvider";
-import UserProvider from "./providers/UserProvider";
-import ModalProvider from "./providers/ModalProvider";
-import ToasterProvider from "./providers/ToasterProvider";
+import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
+import ModalProvider from "@/providers/ModalProvider";
+import ToasterProvider from "@/providers/ToasterProvider";
 import getSongsByUserId from "@/actions/getSongByUserId";
 
 const inter = Inter({ subsets: ["latin"] });
