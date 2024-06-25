@@ -15,6 +15,7 @@
     "@supabase/auth-ui-react": "^0.4.7",
     "@supabase/auth-ui-shared": "^0.1.8",
     "next": "14.2.4",
+    "query-string": "^9.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
@@ -26,10 +27,10 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@types/uniqid": "^5.3.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uniqid": "^5.3.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
