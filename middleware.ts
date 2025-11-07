@@ -8,6 +8,7 @@ export async function middleware(req: NextRequest) {
     res,
   });
 
-  await supabase.auth.getUser();
+  // Refresh session if exists (doesn't throw error if no session)
+  await supabase.auth.getSession();
   return res;
 }
