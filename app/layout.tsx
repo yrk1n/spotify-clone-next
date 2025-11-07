@@ -27,9 +27,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
+            <ToasterProvider />
             <ModalProvider />
             <Sidebar songs={userSongs}>{children}</Sidebar>
             <Player />

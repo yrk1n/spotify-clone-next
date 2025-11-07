@@ -7,14 +7,17 @@ const getLikedSongs = async (): Promise<Song[]> => {
     cookies: cookies,
   });
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+
+  // If no session, return empty array (user not logged in)
+  if (sessionError || !sessionData.session) {
+    return [];
+  }
 
   const { data, error } = await supabase
     .from("liked_songs")
     .select("*, songs(*)")
-    .eq("user_id", user?.id)
+    .eq("user_id", sessionData.session.user.id)
     .order("created_at", { ascending: false });
 
   if (error) {

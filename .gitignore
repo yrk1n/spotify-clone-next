@@ -41,3 +41,9 @@ password.txt
 .mcp-changes.json
 
 schema.sql
+
+
+add_author_column.sql
+fix_storage_policies.sqls
+
+/fixes
